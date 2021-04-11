@@ -16,8 +16,8 @@
     "path": "^0.12.7"
   }
   
- # How To Start
- ## Open CMD And Type:
+ # How To Start:
+ ## Open Your CMD/Powershell And Type:
  1. npm i
  2. node .
 
