@@ -57,7 +57,7 @@ app.get(`/date`, function (req, res) {
 })
 
 app.get(`/8ball`, function (req, res) {
-  let host = app.get("host") || `localhost:${port}`
+  let host = req.get("host") || `localhost:${port}`
   const answers = [
     "Yes.",
     "No.",
