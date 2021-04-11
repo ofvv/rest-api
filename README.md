@@ -20,5 +20,8 @@
  ## Open Your CMD/Powershell And Type:
  1. npm i/npm install
  2. node .
+## You Can Also Type:
+1. npm run int
+2. npm run start
 
 # Now Open Your Browser And Go To The Url Provided By The Console!
