@@ -104,20 +104,21 @@ let qkconsolelog = `
  █▄ █ █▀▄ █▄█ █▄▄ █▄█ █▀▄ ██▄
  `
 
-let consolelogs = [
+
+
+var listeners = app.listen(port, async function () {
+  let host = app.get("host") || `localhost:${port}`
+  let consolelogs = [
   `<-------------------------------->`,
   `${qkconsolelog}`,
   `<-------------------------------->`,
+  "Listening On Port: " + listeners.address().port,
+  "Host: " + host,
+  `Endpoints: ` + host + `/endpoints`,
+  `Available Endpoints:\n` + host + `${Endpoints.join(`\n${host}`)}`,
+  `<-------------------------------->`
 ]
-
-var listeners = app.listen(port, async function () {
   for (let log of consolelogs) {
     console.log(log)
   }
-  let host = app.get("host") || `localhost:${port}`
-  console.log("Listening On Port: " + listeners.address().port)
-  console.log("Host: " + host)
-  console.log(`Endpoints: ` + host + `/endpoints`)
-  console.log(`Available Endpoints:\n` + host + `${Endpoints.join(`\n${host}`)}`)
-  console.log(`<-------------------------------->`)
 });
