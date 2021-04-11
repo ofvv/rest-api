@@ -104,19 +104,19 @@ let qkconsolelog = `
  █▄ █ █▀▄ █▄█ █▄▄ █▄█ █▀▄ ██▄
  `
 
-
+let lengthlog = `<-------------------------------->`
 
 var listeners = app.listen(port, async function () {
   let host = app.get("host") || `localhost:${port}`
   let consolelogs = [
-  `<-------------------------------->`,
+  lengthlog,
   `${qkconsolelog}`,
-  `<-------------------------------->`,
+  lengthlog,
   "Listening On Port: " + listeners.address().port,
   "Host: " + host,
   `Endpoints: ` + host + `/endpoints`,
   `Available Endpoints:\n` + host + `${Endpoints.join(`\n${host}`)}`,
-  `<-------------------------------->`
+  lengthlog
 ]
   for (let log of consolelogs) {
     console.log(log)
