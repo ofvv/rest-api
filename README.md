@@ -18,9 +18,7 @@
   
 # Required:
 [![Node.js](https://nodejs.org/static/images/favicons/favicon-32x32.png)](https://nodejs.org/en/)
-Any Kind of a Browser
-
-[![Browser](https://www.computerhope.com/cdn/browsers.png)](https://brave.com/)
+## Any Kind of a Browser
   
  # How To Start:
  ## Open Your CMD/Powershell And Type:
