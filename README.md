@@ -16,6 +16,9 @@
     "path": "^0.12.7"
   }
   
+# Required:
+[![Node.js](https://nodejs.org/static/images/favicons/favicon-32x32.png)](https://nodejs.org/en/)
+  
  # How To Start:
  ## Open Your CMD/Powershell And Type:
  1. npm i/npm install
