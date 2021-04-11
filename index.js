@@ -1,3 +1,4 @@
+// <--------------------------------> VARIABLES
 var express = require("express");
 var app = express();
 const ms = require("ms");
@@ -9,18 +10,30 @@ const axios = require("axios")
 const cheerio = require("cheerio");
 const figlet = require("figlet");
 
+// <--------------------------------> VARIABLES
+
+// <--------------------------------> EJS VIEW ENGINE
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("views", path.join(__dirname, "/views"));
 app.set("view engine", "ejs")
 app.use(express.static("public"));
 
-let port = process.env.PORT || 8080;
+// <--------------------------------> EJS VIEW ENGINE
+
+let port = process.env.PORT || 8080; // PORT
+
+// <--------------------------------> ENDPOINTS
  
 const Endpoints = [`/date`, `/yearpercent`, `/8ball`];
 
 app.get(`/endpoints`, async function (req, res) {
   res.status(200).send({ endpoints: Endpoints })
 })
+
+// <--------------------------------> ENDPOINTS
+
+// <--------------------------------> MAIN
 
 app.get(`/date`, function (req, res) {
   res.send({
@@ -89,6 +102,10 @@ app.get("/", async function (req, res) {
   res.redirect("/endpoints")
 })
 
+// <--------------------------------> MAIN
+
+// <--------------------------------> ERR HANDLER
+
 app.use(function (err, req, res, next) {
   var host = req.get('host') || `localhost:${port}`;
   console.log(err.stack)
@@ -99,6 +116,9 @@ app.use(function (req, res, next) {
   res.status(404).redirect("/")
 })
 
+// <--------------------------------> ERR HANDLER
+
+// <--------------------------------> CONSOLE LOGS
 let qkconsolelog = `                        
  ▀█ █ █▀█ █▀█ █▀▀ █▀█ █▀█ █▀▀
  █▄ █ █▀▄ █▄█ █▄▄ █▄█ █▀▄ ██▄
@@ -110,7 +130,7 @@ var listeners = app.listen(port, async function () {
   let host = app.get("host") || `localhost:${port}`
   let consolelogs = [
   lengthlog,
-  `${qkconsolelog}`,
+  qkconsolelog,
   lengthlog,
   "Listening On Port: " + listeners.address().port,
   "Host: " + host,
@@ -122,3 +142,4 @@ var listeners = app.listen(port, async function () {
     console.log(log)
   }
 });
+// <--------------------------------> CONSOLE LOGS
