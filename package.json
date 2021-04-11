@@ -4,7 +4,8 @@
   "description": "Example Of Web API With Express.js and Node.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "int": "npm i",
+    "start": "node ."
   },
   "repository": {
     "type": "git",
