@@ -1,6 +1,6 @@
-# Web-API
+# Rest-API
 
-## Example of Web API With Express.js and Node.js
+## Example of Rest API With Express.js and Node.js
 
 # Packages: 
 
