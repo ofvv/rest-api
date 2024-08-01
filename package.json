@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "github.com/ZiroCore/web-api"
+    "url": "github.com/ofvv/rest-api"
   },
   "keywords": [
     "Web"
   ],
-  "author": "ZiroCore",
+  "author": "stage cleared",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
