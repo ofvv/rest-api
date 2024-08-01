@@ -119,19 +119,12 @@ app.use(function (req, res, next) {
 // <--------------------------------> ERR HANDLER
 
 // <--------------------------------> CONSOLE LOGS
-let qkconsolelog = `                        
- ▀█ █ █▀█ █▀█ █▀▀ █▀█ █▀█ █▀▀
- █▄ █ █▀▄ █▄█ █▄▄ █▄█ █▀▄ ██▄
- `
 
 let lengthlog = `<-------------------------------->`
 
 var listeners = app.listen(port, async function () {
   let host = app.get("host") || `localhost:${port}` // I Can't Get The Host In app.listen :(
   let consolelogs = [
-  lengthlog,
-  qkconsolelog,
-  lengthlog,
   "Listening On Port: " + listeners.address().port,
   "Host: " + host,
   `Endpoints: ` + host + `/endpoints`,
